@@ -784,15 +784,6 @@ document.querySelectorAll('.product-card').forEach(card=>{
     if(index<slides.length-1)goTo(index+1);
   });
 
-  /* أحداث الفأرة */
-  wrapper.addEventListener('mousedown',startDrag);
-  document.addEventListener('mousemove',moveDrag);
-  document.addEventListener('mouseup',endDrag);
-
-  /* أحداث اللمس */
-  wrapper.addEventListener('touchstart',startDrag,{passive:false});
-  wrapper.addEventListener('touchmove',moveDrag,{passive:false});
-  wrapper.addEventListener('touchend',endDrag);
   
   /* منع السحب الافتراضي للصورة */
   wrapper.addEventListener('dragstart',e=>e.preventDefault());
